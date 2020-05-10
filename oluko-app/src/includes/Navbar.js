@@ -5,8 +5,7 @@ import {
   Button,
   Form,
   FormControl,
-  Image,
-  NavDropdown,
+  Image
 } from "react-bootstrap";
 import "../App.css";
 import logo from "../assets/img/logo192.png";
@@ -39,15 +38,15 @@ class NavbarComponent extends Component {
             <Button variant="success" className="login-btn">
               Log In
             </Button>
-            <Button variant="danger" className="login-btn">
+            <Button variant="danger" className="signup-btn">
               Sign Up
             </Button>
             <FormControl
               type="text"
               placeholder="Search For Courses"
-              className="mr-sm-2"
+              className="mr-sm-2 search"
             />
-            <Button variant="outline-info">Search</Button>
+            <Button variant="outline-info" className="search-btn">Search</Button>
           </Form>
           </Nav>
           </ Navbar.Collapse >
