@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import NavbarComponent from './includes/Navbar';
+import Navbar from './includes/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
 
-function App() {
+function Apps() {
 
   return (
     <div className="App">
-    <NavbarComponent />
+    <Navbar />
     <Login />
     </div>
   );
 }
 
-export default App;
+export default Apps;

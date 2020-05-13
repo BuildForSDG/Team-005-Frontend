@@ -10,9 +10,12 @@ import {
 import "../App.css";
 import logo from "../assets/img/logo192.png";
 
-class NavbarComponent extends Component {
-  state = {};
-  render() {
+class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+    render() {
     return (
       <>
         <Navbar expand="lg" className="nav-container" variant="light">
@@ -56,4 +59,4 @@ class NavbarComponent extends Component {
   }
 }
 
-export default NavbarComponent;
+export default NavBar;
