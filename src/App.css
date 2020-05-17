@@ -177,11 +177,12 @@
   }
 
   .body{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .login-box{
-    width: 100vw;
+    width: 90vw;
+    margin:auto 5vw;
   }
 }
 
@@ -211,4 +212,10 @@
 
 .social-btn:hover .fa{
   color: white !important;
+}
+
+
+.switcher{
+  width: 100% !important;
+  background-color: 
 }

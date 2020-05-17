@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
 import banner from "../assets/img/Banner.svg";
 import CardComponent from "../includes/CardComponent";
 import courses from "./data.json";
+import LoginComponent from "../includes/LoginComponent";
+import RegisterComponent from "../includes/RegisterComponent";
 
 export default function Login() {
+  const isLoginActive = false;
+
+  function handleFormState() {
+    if (this.isLoginActive === true) return <LoginComponent />;
+    else return <RegisterComponent />
+  }
+
   return (
     <div className="login-body">
       <Image src={banner} alt="banner" height="100%" className="banner" fluid />
@@ -109,56 +118,16 @@ export default function Login() {
         <div className="login-box">
           <div>
             <div className="login-text">
-              Sign In
-              <br />
+              <div className="switchers">
+                <Button className="switcher">Login</Button>
+                <Button className="switcher">Signup</Button>
+              </div>
               <div className="login-description">
                 Login To Be Able To Use Our Services And Access Our Courses
               </div>
             </div>
-            <InputGroup className="mb-3">
-              <InputGroup.Prepend>
-                <InputGroup.Text id="basic-addon1">UserName</InputGroup.Text>
-              </InputGroup.Prepend>
-              <FormControl
-                placeholder="Username"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </InputGroup>
-
-            <InputGroup className="mb-3">
-              <InputGroup.Prepend>
-                <InputGroup.Text id="basic-addon1">Email</InputGroup.Text>
-              </InputGroup.Prepend>
-              <FormControl
-                placeholder="Email"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </InputGroup>
-            <InputGroup className="mb-3">
-              <InputGroup.Prepend>
-                <InputGroup.Text id="basic-addon1">Password</InputGroup.Text>
-              </InputGroup.Prepend>
-              <FormControl
-                placeholder="Password"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </InputGroup>
-            <Button variant="success" className="form-login">
-              Log In
-            </Button>
-            <div className="socials">
-              <Button className="social-btn google">
-                <i className="text-danger rounded fa fa-google"></i> Login With
-                Google
-              </Button>
-              <Button className="social-btn">
-                <i className="text-primary mr-1 rounded fa fa-facebook"></i>
-                Login With Facebook
-              </Button>
-            </div>
+            {handleFormState}
+            <LoginComponent />
           </div>
         </div>
       </div>
