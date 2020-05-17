@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
 import banner from "../assets/img/Banner.svg";
 import CardComponent from "../includes/CardComponent";
-import courses from "./data.json";
+import courses from "./data.js";
 import LoginComponent from "../includes/LoginComponent";
 import RegisterComponent from "../includes/RegisterComponent";
 

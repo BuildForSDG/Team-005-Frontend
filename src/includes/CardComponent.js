@@ -1,13 +1,14 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 
 export default function CardComponent({ data }) {
+  // console.log(data.image)
   return (
     <Card className="card">
       <Card.Img
-       variant="top" 
-       alt="course Image" 
-      //  src={require(data.image)} 
+       variant="top"
+       alt="course Image"
+      src={data.image}
        height="200px" />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
