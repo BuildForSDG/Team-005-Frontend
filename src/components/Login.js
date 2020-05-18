@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
 import banner from "../assets/img/Banner.svg";
 import CardComponent from "../includes/CardComponent";
-import courses from "./data.js";
+import courses from "./data.json";
 import LoginComponent from "../includes/LoginComponent";
 import RegisterComponent from "../includes/RegisterComponent";
 
@@ -127,7 +127,6 @@ export default function Login() {
               </div>
             </div>
             {handleFormState}
-            <LoginComponent />
           </div>
         </div>
       </div>

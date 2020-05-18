@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
+import { InputGroup, FormControl, Button, Card } from "react-bootstrap";
 
 
 export default function LoginComponent() {

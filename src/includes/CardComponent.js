@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 export default function CardComponent({ data }) {
   // console.log(data.image)
@@ -8,7 +8,7 @@ export default function CardComponent({ data }) {
       <Card.Img
        variant="top"
        alt="course Image"
-      src={data.image}
+        src={data.image}
        height="200px" />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
