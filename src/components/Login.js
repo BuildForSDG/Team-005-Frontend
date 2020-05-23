@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
+import { Image, Button, Card } from "react-bootstrap";
 import banner from "../assets/img/Banner.svg";
 import CardComponent from "../includes/CardComponent";
 import courses from "./data.json";
@@ -7,11 +7,12 @@ import LoginComponent from "../includes/LoginComponent";
 import RegisterComponent from "../includes/RegisterComponent";
 
 export default function Login() {
-  const isLoginActive = false;
+  const [isLoginActive, SetLoginState] = useState(false);
 
-  function handleFormState() {
-    if (this.isLoginActive === true) return <LoginComponent />;
-    else return <RegisterComponent />
+  function LoginState() {
+    if (isLoginActive) {
+      return <LoginComponent />;
+    } else return <RegisterComponent />;
   }
 
   return (
@@ -119,15 +120,20 @@ export default function Login() {
           <div>
             <div className="login-text">
               <div className="switchers">
-                <Button className="switcher">Login</Button>
-                <Button className="switcher">Signup</Button>
+                <Button
+                  className="switcher"
+                  onClick={() => SetLoginState(true)}
+                >
+                  Login
+                </Button>
+                <Button className="switcher" onClick={() => SetLoginState(false)}>Signup</Button>
               </div>
               <div className="login-description">
                 Login To Be Able To Use Our Services And Access Our Courses
               </div>
             </div>
-            {handleFormState}
           </div>
+          {LoginState()}
         </div>
       </div>
     </div>
