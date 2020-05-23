@@ -128,9 +128,7 @@ export default function Login() {
                 </Button>
                 <Button className="switcher" onClick={() => SetLoginState(false)}>Signup</Button>
               </div>
-              <div className="login-description">
-                Login To Be Able To Use Our Services And Access Our Courses
-              </div>
+             
             </div>
           </div>
           {LoginState()}

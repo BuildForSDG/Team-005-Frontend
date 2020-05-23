@@ -1,10 +1,13 @@
 import React from "react";
-import { Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
+import { InputGroup, FormControl, Button } from "react-bootstrap";
 
 export default function RegisterComponent() {
   return (
-    <div>
+    <div style={{ paddingLeft: "10px", paddingRight: "10px" }}>
       <div className="input-description">Sign Up</div>
+      <div className="login-description">
+        Sign Up To Be Able To Use Our Services And Access Our Courses
+      </div>
       <InputGroup className="mb-3">
         <InputGroup.Prepend>
           <InputGroup.Text id="basic-addon1">UserName</InputGroup.Text>

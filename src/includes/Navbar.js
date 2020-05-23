@@ -10,7 +10,7 @@ class NavbarComponent extends Component {
     return (
       <>
         <Navbar expand="lg" className="nav-container" variant="light">
-          <Navbar.Brand className="navbar-brand" href="#home">
+          <Navbar.Brand className="navbar-brand" href="/">
             <Image
               src={logo}
               width="30"
@@ -23,18 +23,18 @@ class NavbarComponent extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">About</Nav.Link>
-              <Nav.Link href="#features">Courses</Nav.Link>
-              <Nav.Link href="#pricing">View Curriculum</Nav.Link>
+              <Nav.Link href="/">About</Nav.Link>
+              <Nav.Link href="/courses">Courses</Nav.Link>
+              <Nav.Link href="/">Dashboard</Nav.Link>
             </Nav>
             <Nav>
               <Form inline>
-                <Link to="/login">
+                <Link to="/landing">
                   <Button variant="success" className="login-btn">
                     Log In
                   </Button>
                 </Link>
-                <Link to='/login'>
+                <Link to='/landing'>
                 <Button variant="danger" className="signup-btn">
                   Sign Up
                 </Button>

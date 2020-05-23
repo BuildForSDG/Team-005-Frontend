@@ -3,8 +3,11 @@ import { InputGroup, FormControl, Button } from "react-bootstrap";
 
 export default function LoginComponent() {
   return (
-    <div>
+    <div style={{paddingLeft:'10px', paddingRight:'10px'}}>
       <div className="input-description">Login</div>
+      <div className="login-description">
+        Welcome Back! Please Login To continue..
+      </div>
       <InputGroup className="mb-3">
         <InputGroup.Prepend>
           <InputGroup.Text id="basic-addon1">UserName</InputGroup.Text>
